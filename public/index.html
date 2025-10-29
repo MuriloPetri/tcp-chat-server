@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Chat Web - v2.0 Profissional</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>TCP Chat — versão Web (Socket.IO)</h1>
+    </header>
+
+    <section class="controls">
+      <label>Apelido:
+        <input id="nickname" type="text" value="Usuário" maxlength="30" />
+      </label>
+      <button id="connectBtn">Conectar</button>
+      <button id="disconnectBtn" disabled>Desconectar</button>
+      <span id="status" class="status disconnected">🔴 Desconectado</span>
+    </section>
+
+    <section class="chat">
+      <div id="chatArea" class="chat-area" aria-live="polite"></div>
+
+      <div class="message-row">
+        <input id="msgInput" type="text" placeholder="Digite sua mensagem e pressione Enter" />
+        <button id="sendBtn">Enviar</button>
+      </div>
+    </section>
+
+    <footer>
+      <small>Dica: abra múltiplas abas para testar vários clientes.</small>
+    </footer>
+  </div>
+
+  <!-- Socket.IO client (servido automaticamente pelo servidor) -->
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="client.js"></script>
+</body>
+</html>

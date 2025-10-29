@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Painel do Servidor TCP</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Servidor TCP — Painel de Controle</h2>
+    <div class="status">
+      <p><strong>Clientes conectados:</strong></p>
+      <ul id="clients"></ul>
+    </div>
+
+    <div class="logs">
+      <p><strong>Logs do servidor:</strong></p>
+      <textarea id="logBox" readonly></textarea>
+    </div>
+
+    <div class="actions">
+      <input id="broadcastMsg" type="text" placeholder="Mensagem de broadcast...">
+      <button id="btnBroadcast">Enviar</button>
+    </div>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="panel.js"></script>
+</body>
+</html>
